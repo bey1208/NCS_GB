@@ -1,0 +1,204 @@
+/* 모든 테마는~ 시작할 때 theme.config.php에서 데스크인지 모바일인지 확인 먼저~ */
+/* 1. 스킨 - board : 갤러리/ 게시판
+       - latest : 최신!
+   2. 관리자설정에서 테마,스킨선택~
+   3. index.php에서 echo latest 복붙
+       es) echo latest('slider_baner','service',3,33)*/
+
+/* 얇은 바탕체 */
+.SL{font-family: 'SunBatang-Light'}
+/* 굵은 바탕체 */
+.SB{font-family: 'SunBatang-Medium'}
+
+ /* 필요없는 것들 */
+/* aside tnb hd_wrapper */
+.disNo{display: none}
+.oH{height: 0; overflow: hidden}
+
+/* 배경화면 색상 바꾸기 */
+#hd{background: white}
+
+/* 1200width 바꾸기 */
+#hd_pop, #hd_wrapper, #tnb .inner,
+#gnb .gnb_wrap, #container_wr, #ft_wr{width: auto}
+
+/* 컨테이너 상자 조절 */
+#container{
+  float: none; position: relative; min-height: 0;
+  height:0; margin: 0 auto; font-size: auto;
+  width: 1260px;
+}
+
+/* 헤더~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!!!!!! */
+#hd_wrapper{height:auto}
+.header{position:relative;}
+
+/* sns */
+#snsUl{position:absolute; left: 50px; top:33px; z-index:100;
+      }
+
+#snsUl .snsLi1,
+#snsUl .snsLi2{ display: inline-block; margin-right: 20px;}
+.snsA {width: 37px; height: 37px; margin-right: 5px;
+   display: inline-block; vertical-align: middle;}
+
+#snsUl > li span{vertical-align: middle;
+                  display: inline-block; font-size: 23px;
+                  font-family: 'SunBatang-Medium';
+                  margin-right: 5px; letter-spacing:-3px}
+#snsUl > li em{vertical-align: middle;
+              display: inline-block; font-size:14px;
+              text-decoration: none; font-style: normal;
+              font-family:'NotoSansKR-Medium'}
+
+#snsUl .snsLi1 a{
+  background:url(//www.감성커피.com/img/common/h_sns1_bl.png)no-repeat center;}
+#snsUl .snsLi2 a{
+background: url(//www.감성커피.com/img/common/h_sns2_bl.png)no-repeat center;}
+
+/* 로고이미지 */
+#logo{
+  float:none; position:absolute; left: 50%; top:0; margin-left:-121px;
+  z-index:100
+}
+#logo a{ width: 242px; height: 48px; position:relative;
+  display: block;
+  background:url(//www.xn--439as41bv4jv9f.com/img/common/bi.png)no-repeat center;
+
+}
+
+/* 상단네비~~ */
+#gnb {text-align: center; font-size: 0; line-height: 0}
+
+/* li */
+#gnb .gnb_1dli{
+  float: none; display: inline-block; font-size: 20px;
+  line-height: 5;font-weight: 300;
+}
+#gnb .gnb_1dli:nth-child(4){margin-right:380px;}
+
+/* a */
+#gnb .gnb_1da{font-weight: 300}
+#gnb .gnb_1dli:hover > a {color:black}
+/* 하위분류 */
+#gnb_1dul .gnb_1dli .bg{display: none;}
+
+/* 햄버거 버튼 */
+#gnb_all{position:fixed; width: 100%; height:100%;
+         background: #e1e1e1; top:0; z-index:1000;}
+/* 열기 클릭 이미지 */
+
+#gnb .gnb_menu_btn{
+  background: url(//www.감성커피.com/img/common/stm_open_bl.png)no-repeat center;
+  position:absolute; right: 50px;top: 37px; width: 30px; height: 28px;
+  font-size: 20px;line-height: 5;padding: 0px 20px;
+}
+/* 닫기 클릭 이미지 */
+#gnb .gnb_close_btn{
+  position: absolute; right: 50px; top: 37px; padding: 0px 20px;
+  width: 30px; height: 28px; font-size: 20px; line-height: 5;
+  background: url(//www.감성커피.com/img/common/stm_close.png) no-repeat center;
+}
+
+/* 햄버거 버튼 클릭 노출네비~*/
+#gnb .gnb_wrap:hover,
+#gnb .gnb_wrap:focus,{z-index:0}
+
+#gnb_all h2{border:none;}
+#gnb_all .gnb_div{
+  position:absolute; left:50%; top:50%; margin-left:-630px;
+  transform:translateY(-50%); width: 1260px;
+}
+
+/* 대메뉴 */
+#gnb_all .gnb_al_ul{ position:relative; font-size:20px; line-height:5;}
+#gnb_all .gnb_al_ul:before{
+  content: ''; position: absolute; left: 0; top: 30%;
+  width: 100%; height: 2px; background-color: rgba(34,34,34,0.2);
+  display: block;
+}
+#gnb_all .gnb_al_li{
+  float: none; display: inline-block; font-size: 20px;
+  line-height: 5;font-weight: 300; vertical-align: top;
+  width: 180px; border:none;
+}
+#gnb_all .gnb_al_li .gnb_al_a{
+  font-size: 23px; font-family: 'SunBatang-Light';
+  color:#484848; line-height: 1; margin-bottom:20px;
+  display: inline-block;
+}
+
+/* 소메뉴*/
+#gnb_all .gnbeyUl{}
+#gnb_all .gnbeyUl > li{}
+#gnb_all .gnbeyUl > li a{font-size:16px;}
+
+
+
+/* 컨텐츠으으으으ㅡ으ㅡ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~!!!!!!!!!!! */
+
+/* 배너 사이즈 조절 */
+#container_wr .banner_bey{width: 1920px; height: 100%;}
+#container_wr .main_slider_baner{padding:0;}
+
+
+/* cf */
+#cfWr{
+  position: relative; overflow: hidden; height: 759px;
+  background: url('//www.감성커피.com/img/main/cf_video.jpg')no-repeat center;
+  background-size: auto; background-size: cover; box-sizing: border-box;
+}
+
+/* 비디오 위 검은배경 */
+#cfWr .backG{
+  display: block; position: absolute;
+  left: 0; top: 0; width: 100%; height: 100%;
+  background: url('//www.감성커피.com/img/main/new/pattern.png')repeat;
+  z-index: 10;
+}
+
+#cfWr .videoWr{
+  position: absolute; left: 50%; top: 50%;
+  margin-left: -1000px; margin-top: -380px;
+  width: 2000px; height: 760px;
+}
+/* 비디오 위 글씨 */
+#cfWr .videoText{
+  font-size: 70px; position:absolute; left: 50%; top:30%;
+  transform:translateX(-50%); font-family:'SunBatang-Light';
+  z-index:20; color:white; text-align: center; width: 800px;
+}
+#cfWr .videoText span,
+#cfWr .videoText strong{ letter-spacing:-5px; display: inline-block;}
+
+#cfWr .videoText strong{ margin-left: 5px; font-family: 'SunBatang-Medium';}
+#cfWr .videoText a{
+  font-family:'NotoSansKR-Medium';font-size: 18px;
+  padding:15px 40px; border:1px solid rgba(255,255,255,0.3);
+  display:inline-block; color:white; letter-spacing:-0.05em;
+}
+
+/* 푸터어어어어어어ㅓ어엉으어어어어ㅓ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~1!! */
+#ft{}
+#ftWr{
+  margin-top:-185px; z-index:10; padding-top:45px;
+  background: transparent; position:relative;
+  border-top:1px solid rgba(255,255,255,0.2);
+}
+   /* 플루트 클리어 */
+#ftWr::after{content:""; display: block; clear: both;}
+
+   /* 왼쪽 텍스트 */
+.ftLeft{float: left; color:white; text-align: left; padding-left: 40px;}
+.ftLeft h3{font-size: 42px; font-family:'SunBatang-Light';}
+.ftLeft p{ font-family: 'NotoSansKR-Medium';
+  font-size: 20px; letter-spacing: -0.03em; color: #fff;
+}
+  /* 오른쪽 텍스트 */
+.ftRigth{float:right; text-align: right; padding-right: 40px;}
+  /* 개인정보 지침 등 */
+#ft_link{text-align: right; }
+#ft_link a{display: inline-block; font-size:16px; margin-right: 5px;}
+   /* 주소 */
+.ftRigth .ftInfo,
+#ftCopy{font-size:15px; font-family: 'NotoSansKR-Light';}
